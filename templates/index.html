@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Customer Support Chatbot</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="chat-container">
+
+        <div class="chat-header">
+
+            <div>
+                <h1>AI Support Assistant</h1>
+
+                <p>
+                    Ask me about orders, delivery, returns,
+                    refunds and payments.
+                </p>
+            </div>
+
+            <div class="status">
+                ● Online
+            </div>
+
+        </div>
+
+
+        <div id="chat-box" class="chat-box">
+
+            <div class="message bot-message">
+
+                <div class="message-content">
+
+                    Hello! 👋
+
+                    <br><br>
+
+                    I'm your AI customer support assistant.
+                    How can I help you today?
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="suggestions">
+
+            <button onclick="sendSuggestion('Where is my order?')">
+                Order Status
+            </button>
+
+            <button onclick="sendSuggestion('How long does delivery take?')">
+                Delivery
+            </button>
+
+            <button onclick="sendSuggestion('What is your return policy?')">
+                Returns
+            </button>
+
+            <button onclick="sendSuggestion('What payment methods do you accept?')">
+                Payments
+            </button>
+
+        </div>
+
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="message-input"
+                placeholder="Type your message..."
+                autocomplete="off"
+            >
+
+            <button id="send-button">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
